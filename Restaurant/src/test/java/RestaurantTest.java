@@ -87,6 +87,10 @@ public class RestaurantTest {
     @DisplayName("Pedido reduce saldo de usuario")
     @Test
     public void testD(){
+        float saldoA;
 
+        float saldoB;
+
+        //Assertions.assertNotEquals(saldoB,saldoA);
     }
 }
