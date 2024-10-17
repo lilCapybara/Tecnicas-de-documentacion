@@ -19,16 +19,21 @@ public Usuario(String nombreYApellido, int tipoUsuario, float saldoCuenta,String
 
 public void cargarCredito(float cuanto) {
 	saldoCuenta+=cuanto;
-	
+
 }
 float descontarSaldo(float cuanto) throws SinSaldoException {
 	if((saldoCuenta-cuanto)<0) throw new SinSaldoException();
 	else
 		saldoCuenta-= cuanto;
 	return saldoCuenta;
-	
+
 }
 float getSaldo() {
 	return saldoCuenta;
 }
+
+public String getEmail(){
+	return email;
 }
+}
+
