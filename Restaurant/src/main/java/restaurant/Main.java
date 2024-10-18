@@ -70,7 +70,7 @@ public class Main {
 	try {
 		p.solicitarPedido();
 
-		//Mostrador ordenesActuales = new Mostrador();
+		Mostrador ordenesActuales = new Mostrador();
 
 		//ordenesActuales.agregar(p);
 

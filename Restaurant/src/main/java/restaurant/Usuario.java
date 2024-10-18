@@ -28,7 +28,7 @@ float descontarSaldo(float cuanto) throws SinSaldoException {
 	return saldoCuenta;
 
 }
-float getSaldo() {
+public float getSaldo() {
 	return saldoCuenta;
 }
 
