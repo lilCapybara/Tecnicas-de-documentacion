@@ -1,16 +1,25 @@
 package parcial.tdyv.java;
-
+import parcial.tdyv.java.Socio;
+import parcial.tdyv.java.Persona;
 import java.util.ArrayList;
+import java.util.List;
 
 public class NominaSocios {
-static	ArrayList<Socio> nomina;
+static List<Socio> nomina;
 static int cupo;
 static int proxSocio;
-/***
+
+	public NominaSocios(List<Socio> nomina,int cupo,int proxSocio) {
+		this.cupo = cupo;
+		this.proxSocio = proxSocio;
+	}
+
+	/***
  * 
  * @param p Persona a asociar. Si la persona ya existe,  no se efectiviza el alta y se lanza una excepcion
  * @author oscar
  * */
+
 public static void Asociar(Persona p)  throws YaExisteSocioException {
 	Socio s = new Socio(p);
 	if(nomina==null) nomina= new ArrayList<Socio>();
@@ -57,7 +66,7 @@ public static int ContarSocios() {
 	return proxSocio;
 }
 
-public static ArrayList<Socio> GetNomina(){
+public static List<Socio> GetNomina(){
 	return nomina;
 }
 }
