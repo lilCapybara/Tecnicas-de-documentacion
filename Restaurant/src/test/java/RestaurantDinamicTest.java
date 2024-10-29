@@ -5,7 +5,7 @@ import restaurant.Usuario;
 public class RestaurantDinamicTest {
 
     @DataProvider
-    public Usuario[] cargarUsuarios(){
+    public Object[] cargarUsuarios(){
         return new Usuario[]{
                new Usuario("Homero Simpson", 0, 350, "homerojsimpson@springfield.com"),
                 new Usuario("Barney Gomez", 0, 0, "el14gomez@springfield.com"),
@@ -14,8 +14,13 @@ public class RestaurantDinamicTest {
         };
     }
 
-    @Test(dataProvider="cargarUsuarios")
+    @Test(DataProvider="cargarUsuarios")
     public void testB(){
-
+        Usuario[] usuarios = cargarUsuarios();
+        for(Usuario user:usuarios){
+            assert (user.getEmail().contains("@"))
+        }
     }
+
+
 }

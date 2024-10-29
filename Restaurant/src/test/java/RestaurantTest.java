@@ -121,6 +121,12 @@ public class RestaurantTest {
     @DisplayName("Test de usuarios repetidos")
     @Test
     public void testA(){
+/*      //Sin usar el metodo de carga de datos
+        u1 =new Usuario("Homero Simpson", 0, 350, "homerojsimpson@springfield.com");
+        u2 =new Usuario("Barney Gomez", 0, 0, "el14gomez@springfield.com");
+        u3 =new Usuario("Edna Krabappel", 1, 0, "ednak@springfield.com");
+        u4 =new Usuario("Homero", 0, 0, "homerojsimpson@springfield.com");
+*/
         Assertions.assertNotEquals(u1.getEmail(),u2.getEmail());
         Assertions.assertNotEquals(u1.getEmail(),u3.getEmail());
         Assertions.assertNotEquals(u1.getEmail(),u4.getEmail()); //Deberia dar error a esta altura
